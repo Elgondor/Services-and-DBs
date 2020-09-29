@@ -17,3 +17,8 @@ services:
             - "5434:5432"
         environment: 
             - "POSTGRES_PASSWORD=ObservBolMain"
+
+    python:
+        image: python:3.7
+        volumes:
+            - "./pythonScripts:/usr/src"
