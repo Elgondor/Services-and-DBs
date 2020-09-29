@@ -1,0 +1,19 @@
+version: "2"
+services:
+    postgres-draft:
+        image: postgres:13.0
+        volumes:
+            - "./postgresql-draft/data:/var/lib/postgresql/data"
+        ports:
+            - "5432:5432"
+        environment: 
+            - "POSTGRES_PASSWORD=ObservBolDraft"
+
+    postgres-main:
+        image: postgres:13.0
+        volumes:
+            - "./postgresql-main/data:/var/lib/postgresql/data"
+        ports:
+            - "5434:5432"
+        environment: 
+            - "POSTGRES_PASSWORD=ObservBolMain"
